@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scrollSpy & smoothScrolling | JQuery Plugins</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <style>
+        .sidebar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: lightgray;
+            width: 150px;
+            padding: 10px;
+            font-size:
+        }
+
+        .sidebar .active {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+    </style>
+    <div class="container">
+        <div class="section">
+            <h3>Scroll Spy</h3>
+            <h6>File: jquery.scrollSpy.js</h6>
+            <p>Scroll down and look at the sidebar on bottom left</p>
+            <hr />
+            <h3>Smooth Scrolling</h3>
+            <h6>File: jquery.smoothScrolling.js</h6>
+            <p>Click on a chapter in the sidebar and see the page scrolling smoothly</p>
+        </div>
+        <div class="sidebar">
+            <h4>Current chapter</h4>
+            <ul>
+                <li>
+                    <a href="#chapter-1">Chapter 1</a>
+                </li>
+                <li>
+                    <a href="#chapter-2">Chapter 2</a>
+                </li>
+                <li>
+                    <a href="#chapter-3">Chapter 3</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="chapter-1">
+                <h3>Chapter 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vero quibusdam quam labore assumenda voluptate cumque est delectus
+                    iure excepturi optio blanditiis ducimus natus modi, maxime dolorem laudantium sit. Asperiores in et ut
+                    neque aut doloribus. Porro est, aperiam sunt ea totam non dolorum? Maiores necessitatibus vitae, odit
+                    recusandae eum aut nobis doloribus quisquam iusto quia iste consectetur ullam sapiente atque velit eos
+                    placeat nostrum quaerat dolorem? Impedit, autem quia dignissimos, laboriosam odit laudantium perspiciatis
+                    optio veniam corporis eum accusantium. Deserunt molestiae beatae nesciunt, dicta harum eveniet autem
+                    dolor quam iste omnis, aperiam hic magni nemo maxime ducimus explicabo inventore laborum fuga reprehenderit
+                    rem optio nam impedit recusandae porro. Repellat id maiores harum exercitationem adipisci excepturi odit
+                    quisquam ad blanditiis tenetur ipsa ab quasi rem, veniam assumenda, recusandae debitis placeat inventore
+                    est fugiat possimus iure dolor! Ratione impedit nisi saepe ut nam magnam molestiae quos modi explicabo
+                    aspernatur similique quam esse voluptatem, sed ea sit eius rem illum. Eaque, earum inventore sequi ea
+                    explicabo repellendus ad odit a officia quam dolores corporis iure architecto voluptas consequatur fuga
+                    facere nam dignissimos? Ea, unde dolor ad tenetur asperiores nihil impedit neque odit velit harum quisquam
+                    autem amet corrupti consequuntur aliquid, et recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Quo vero quibusdam quam labore assumenda voluptate cumque est delectus iure excepturi optio blanditiis
+                    ducimus natus modi, maxime dolorem laudantium sit. Asperiores in et ut neque aut doloribus. Porro est,
+                    aperiam sunt ea totam non dolorum? Maiores necessitatibus vitae, odit recusandae eum aut nobis doloribus
+                    quisquam iusto quia iste consectetur ullam sapiente atque velit eos placeat nostrum quaerat dolorem?
+                    Impedit, autem quia dignissimos, laboriosam odit laudantium perspiciatis optio veniam corporis eum accusantium.
+                    Deserunt molestiae beatae nesciunt, dicta harum eveniet autem dolor quam iste omnis, aperiam hic magni
+                    nemo maxime ducimus explicabo inventore laborum fuga reprehenderit rem optio nam impedit recusandae porro.
+                    Repellat id maiores harum exercitationem adipisci excepturi odit quisquam ad blanditiis tenetur ipsa
+                    ab quasi rem, veniam assumenda, recusandae debitis placeat inventore est fugiat possimus iure dolor!
+                    Ratione impedit nisi saepe ut nam magnam molestiae quos modi explicabo aspernatur similique quam esse
+                    voluptatem, sed ea sit eius rem illum. Eaque, earum inventore sequi ea explicabo repellendus ad odit
+                    a officia quam dolores corporis iure architecto voluptas consequatur fuga facere nam dignissimos? Ea,
+                    unde dolor ad tenetur asperiores nihil impedit neque odit velit harum quisquam autem amet corrupti consequuntur
+                    aliquid, et recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vero quibusdam
+                    quam labore assumenda voluptate cumque est delectus iure excepturi optio blanditiis ducimus natus modi,
+                    maxime dolorem laudantium sit. Asperiores in et ut neque aut doloribus. Porro est, aperiam sunt ea totam
+                    non dolorum? Maiores necessitatibus vitae, odit recusandae eum aut nobis doloribus quisquam iusto quia
+                    iste consectetur ullam sapiente atque velit eos placeat nostrum quaerat dolorem? Impedit, autem quia
+                    dignissimos, laboriosam odit laudantium perspiciatis optio veniam corporis eum accusantium. Deserunt
+                    molestiae beatae nesciunt, dicta harum eveniet autem dolor quam iste omnis, aperiam hic magni nemo maxime
+                    ducimus explicabo inventore laborum fuga reprehenderit rem optio nam impedit recusandae porro. Repellat
+                    id maiores harum exercitationem adipisci excepturi odit quisquam ad blanditiis tenetur ipsa ab quasi
+                    rem, veniam assumenda, recusandae debitis placeat inventore est fugiat possimus iure dolor! Ratione impedit
+                    nisi saepe ut nam magnam molestiae quos modi explicabo aspernatur similique quam esse voluptatem, sed
+                    ea sit eius rem illum. Eaque, earum inventore sequi ea explicabo repellendus ad odit a officia quam dolores
+                    corporis iure architecto voluptas consequatur fuga facere nam dignissimos? Ea, unde dolor ad tenetur
+                    asperiores nihil impedit neque odit velit harum quisquam autem amet corrupti consequuntur aliquid, et
+                    recusandae.
+                </p>
+
+            </div>
+            <div id="chapter-2">
+                <h3>Chapter 2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vero quibusdam quam labore assumenda voluptate cumque est delectus
+                    iure excepturi optio blanditiis ducimus natus modi, maxime dolorem laudantium sit. Asperiores in et ut
+                    neque aut doloribus. Porro est, aperiam sunt ea totam non dolorum? Maiores necessitatibus vitae, odit
+                    recusandae eum aut nobis doloribus quisquam iusto quia iste consectetur ullam sapiente atque velit eos
+                    placeat nostrum quaerat dolorem? Impedit, autem quia dignissimos, laboriosam odit laudantium perspiciatis
+                    optio veniam corporis eum accusantium. Deserunt molestiae beatae nesciunt, dicta harum eveniet autem
+                    dolor quam iste omnis, aperiam hic magni nemo maxime ducimus explicabo inventore laborum fuga reprehenderit
+                    rem optio nam impedit recusandae porro. Repellat id maiores harum exercitationem adipisci excepturi odit
+                    quisquam ad blanditiis tenetur ipsa ab quasi rem, veniam assumenda, recusandae debitis placeat inventore
+                    est fugiat possimus iure dolor! Ratione impedit nisi saepe ut nam magnam molestiae quos modi explicabo
+                    aspernatur similique quam esse voluptatem, sed ea sit eius rem illum. Eaque, earum inventore sequi ea
+                    explicabo repellendus ad odit a officia quam dolores corporis iure architecto voluptas consequatur fuga
+                    facere nam dignissimos? Ea, unde dolor ad tenetur asperiores nihil impedit neque odit velit harum quisquam
+                    autem amet corrupti consequuntur aliquid, et recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Quo vero quibusdam quam labore assumenda voluptate cumque est delectus iure excepturi optio blanditiis
+                    ducimus natus modi, maxime dolorem laudantium sit. Asperiores in et ut neque aut doloribus. Porro est,
+                    aperiam sunt ea totam non dolorum? Maiores necessitatibus vitae, odit recusandae eum aut nobis doloribus
+                    quisquam iusto quia iste consectetur ullam sapiente atque velit eos placeat nostrum quaerat dolorem?
+                    Impedit, autem quia dignissimos, laboriosam odit laudantium perspiciatis optio veniam corporis eum accusantium.
+                    Deserunt molestiae beatae nesciunt, dicta harum eveniet autem dolor quam iste omnis, aperiam hic magni
+                    nemo maxime ducimus explicabo inventore laborum fuga reprehenderit rem optio nam impedit recusandae porro.
+                    Repellat id maiores harum exercitationem adipisci excepturi odit quisquam ad blanditiis tenetur ipsa
+                    ab quasi rem, veniam assumenda, recusandae debitis placeat inventore est fugiat possimus iure dolor!
+                    Ratione impedit nisi saepe ut nam magnam molestiae quos modi explicabo aspernatur similique quam esse
+                    voluptatem, sed ea sit eius rem illum. Eaque, earum inventore sequi ea explicabo repellendus ad odit
+                    a officia quam dolores corporis iure architecto voluptas consequatur fuga facere nam dignissimos? Ea,
+                    unde dolor ad tenetur asperiores nihil impedit neque odit velit harum quisquam autem amet corrupti consequuntur
+                    aliquid, et recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vero quibusdam
+                    quam labore assumenda voluptate cumque est delectus iure excepturi optio blanditiis ducimus natus modi,
+                    maxime dolorem laudantium sit. Asperiores in et ut neque aut doloribus. Porro est, aperiam sunt ea totam
+                    non dolorum? Maiores necessitatibus vitae, odit recusandae eum aut nobis doloribus quisquam iusto quia
+                    iste consectetur ullam sapiente atque velit eos placeat nostrum quaerat dolorem? Impedit, autem quia
+                    dignissimos, laboriosam odit laudantium perspiciatis optio veniam corporis eum accusantium. Deserunt
+                    molestiae beatae nesciunt, dicta harum eveniet autem dolor quam iste omnis, aperiam hic magni nemo maxime
+                    ducimus explicabo inventore laborum fuga reprehenderit rem optio nam impedit recusandae porro. Repellat
+                    id maiores harum exercitationem adipisci excepturi odit quisquam ad blanditiis tenetur ipsa ab quasi
+                    rem, veniam assumenda, recusandae debitis placeat inventore est fugiat possimus iure dolor! Ratione impedit
+                    nisi saepe ut nam magnam molestiae quos modi explicabo aspernatur similique quam esse voluptatem, sed
+                    ea sit eius rem illum. Eaque, earum inventore sequi ea explicabo repellendus ad odit a officia quam dolores
+                    corporis iure architecto voluptas consequatur fuga facere nam dignissimos? Ea, unde dolor ad tenetur
+                    asperiores nihil impedit neque odit velit harum quisquam autem amet corrupti consequuntur aliquid, et
+                    recusandae.
+                </p>
+            </div>
+            <div id="chapter-3">
+                <h3>Chapter 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vero quibusdam quam labore assumenda voluptate cumque est delectus
+                    iure excepturi optio blanditiis ducimus natus modi, maxime dolorem laudantium sit. Asperiores in et ut
+                    neque aut doloribus. Porro est, aperiam sunt ea totam non dolorum? Maiores necessitatibus vitae, odit
+                    recusandae eum aut nobis doloribus quisquam iusto quia iste consectetur ullam sapiente atque velit eos
+                    placeat nostrum quaerat dolorem? Impedit, autem quia dignissimos, laboriosam odit laudantium perspiciatis
+                    optio veniam corporis eum accusantium. Deserunt molestiae beatae nesciunt, dicta harum eveniet autem
+                    dolor quam iste omnis, aperiam hic magni nemo maxime ducimus explicabo inventore laborum fuga reprehenderit
+                    rem optio nam impedit recusandae porro. Repellat id maiores harum exercitationem adipisci excepturi odit
+                    quisquam ad blanditiis tenetur ipsa ab quasi rem, veniam assumenda, recusandae debitis placeat inventore
+                    est fugiat possimus iure dolor! Ratione impedit nisi saepe ut nam magnam molestiae quos modi explicabo
+                    aspernatur similique quam esse voluptatem, sed ea sit eius rem illum. Eaque, earum inventore sequi ea
+                    explicabo repellendus ad odit a officia quam dolores corporis iure architecto voluptas consequatur fuga
+                    facere nam dignissimos? Ea, unde dolor ad tenetur asperiores nihil impedit neque odit velit harum quisquam
+                    autem amet corrupti consequuntur aliquid, et recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Quo vero quibusdam quam labore assumenda voluptate cumque est delectus iure excepturi optio blanditiis
+                    ducimus natus modi, maxime dolorem laudantium sit. Asperiores in et ut neque aut doloribus. Porro est,
+                    aperiam sunt ea totam non dolorum? Maiores necessitatibus vitae, odit recusandae eum aut nobis doloribus
+                    quisquam iusto quia iste consectetur ullam sapiente atque velit eos placeat nostrum quaerat dolorem?
+                    Impedit, autem quia dignissimos, laboriosam odit laudantium perspiciatis optio veniam corporis eum accusantium.
+                    Deserunt molestiae beatae nesciunt, dicta harum eveniet autem dolor quam iste omnis, aperiam hic magni
+                    nemo maxime ducimus explicabo inventore laborum fuga reprehenderit rem optio nam impedit recusandae porro.
+                    Repellat id maiores harum exercitationem adipisci excepturi odit quisquam ad blanditiis tenetur ipsa
+                    ab quasi rem, veniam assumenda, recusandae debitis placeat inventore est fugiat possimus iure dolor!
+                    Ratione impedit nisi saepe ut nam magnam molestiae quos modi explicabo aspernatur similique quam esse
+                    voluptatem, sed ea sit eius rem illum. Eaque, earum inventore sequi ea explicabo repellendus ad odit
+                    a officia quam dolores corporis iure architecto voluptas consequatur fuga facere nam dignissimos? Ea,
+                    unde dolor ad tenetur asperiores nihil impedit neque odit velit harum quisquam autem amet corrupti consequuntur
+                    aliquid, et recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vero quibusdam
+                    quam labore assumenda voluptate cumque est delectus iure excepturi optio blanditiis ducimus natus modi,
+                    maxime dolorem laudantium sit. Asperiores in et ut neque aut doloribus. Porro est, aperiam sunt ea totam
+                    non dolorum? Maiores necessitatibus vitae, odit recusandae eum aut nobis doloribus quisquam iusto quia
+                    iste consectetur ullam sapiente atque velit eos placeat nostrum quaerat dolorem? Impedit, autem quia
+                    dignissimos, laboriosam odit laudantium perspiciatis optio veniam corporis eum accusantium. Deserunt
+                    molestiae beatae nesciunt, dicta harum eveniet autem dolor quam iste omnis, aperiam hic magni nemo maxime
+                    ducimus explicabo inventore laborum fuga reprehenderit rem optio nam impedit recusandae porro. Repellat
+                    id maiores harum exercitationem adipisci excepturi odit quisquam ad blanditiis tenetur ipsa ab quasi
+                    rem, veniam assumenda, recusandae debitis placeat inventore est fugiat possimus iure dolor! Ratione impedit
+                    nisi saepe ut nam magnam molestiae quos modi explicabo aspernatur similique quam esse voluptatem, sed
+                    ea sit eius rem illum. Eaque, earum inventore sequi ea explicabo repellendus ad odit a officia quam dolores
+                    corporis iure architecto voluptas consequatur fuga facere nam dignissimos? Ea, unde dolor ad tenetur
+                    asperiores nihil impedit neque odit velit harum quisquam autem amet corrupti consequuntur aliquid, et
+                    recusandae.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vero quibusdam quam labore assumenda voluptate cumque est delectus
+                    iure excepturi optio blanditiis ducimus natus modi, maxime dolorem laudantium sit. Asperiores in et ut
+                    neque aut doloribus. Porro est, aperiam sunt ea totam non dolorum? Maiores necessitatibus vitae, odit
+                    recusandae eum aut nobis doloribus quisquam iusto quia iste consectetur ullam sapiente atque velit eos
+                    placeat nostrum quaerat dolorem? Impedit, autem quia dignissimos, laboriosam odit laudantium perspiciatis
+                    optio veniam corporis eum accusantium. Deserunt molestiae beatae nesciunt, dicta harum eveniet autem
+                    dolor quam iste omnis, aperiam hic magni nemo maxime ducimus explicabo inventore laborum fuga reprehenderit
+                    rem optio nam impedit recusandae porro. Repellat id maiores harum exercitationem adipisci excepturi odit
+                    quisquam ad blanditiis tenetur ipsa ab quasi rem, veniam assumenda, recusandae debitis placeat inventore
+                    est fugiat possimus iure dolor! Ratione impedit nisi saepe ut nam magnam molestiae quos modi explicabo
+                    aspernatur similique quam esse voluptatem, sed ea sit eius rem illum. Eaque, earum inventore sequi ea
+                    explicabo repellendus ad odit a officia quam dolores corporis iure architecto voluptas consequatur fuga
+                    facere nam dignissimos? Ea, unde dolor ad tenetur asperiores nihil impedit neque odit velit harum quisquam
+                    autem amet corrupti consequuntur aliquid, et recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Quo vero quibusdam quam labore assumenda voluptate cumque est delectus iure excepturi optio blanditiis
+                    ducimus natus modi, maxime dolorem laudantium sit. Asperiores in et ut neque aut doloribus. Porro est,
+                    aperiam sunt ea totam non dolorum? Maiores necessitatibus vitae, odit recusandae eum aut nobis doloribus
+                    quisquam iusto quia iste consectetur ullam sapiente atque velit eos placeat nostrum quaerat dolorem?
+                    Impedit, autem quia dignissimos, laboriosam odit laudantium perspiciatis optio veniam corporis eum accusantium.
+                    Deserunt molestiae beatae nesciunt, dicta harum eveniet autem dolor quam iste omnis, aperiam hic magni
+                    nemo maxime ducimus explicabo inventore laborum fuga reprehenderit rem optio nam impedit recusandae porro.
+                    Repellat id maiores harum exercitationem adipisci excepturi odit quisquam ad blanditiis tenetur ipsa
+                    ab quasi rem, veniam assumenda, recusandae debitis placeat inventore est fugiat possimus iure dolor!
+                    Ratione impedit nisi saepe ut nam magnam molestiae quos modi explicabo aspernatur similique quam esse
+                    voluptatem, sed ea sit eius rem illum. Eaque, earum inventore sequi ea explicabo repellendus ad odit
+                    a officia quam dolores corporis iure architecto voluptas consequatur fuga facere nam dignissimos? Ea,
+                    unde dolor ad tenetur asperiores nihil impedit neque odit velit harum quisquam autem amet corrupti consequuntur
+                    aliquid, et recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo vero quibusdam
+                    quam labore assumenda voluptate cumque est delectus iure excepturi optio blanditiis ducimus natus modi,
+                    maxime dolorem laudantium sit. Asperiores in et ut neque aut doloribus. Porro est, aperiam sunt ea totam
+                    non dolorum? Maiores necessitatibus vitae, odit recusandae eum aut nobis doloribus quisquam iusto quia
+                    iste consectetur ullam sapiente atque velit eos placeat nostrum quaerat dolorem? Impedit, autem quia
+                    dignissimos, laboriosam odit laudantium perspiciatis optio veniam corporis eum accusantium. Deserunt
+                    molestiae beatae nesciunt, dicta harum eveniet autem dolor quam iste omnis, aperiam hic magni nemo maxime
+                    ducimus explicabo inventore laborum fuga reprehenderit rem optio nam impedit recusandae porro. Repellat
+                    id maiores harum exercitationem adipisci excepturi odit quisquam ad blanditiis tenetur ipsa ab quasi
+                    rem, veniam assumenda, recusandae debitis placeat inventore est fugiat possimus iure dolor! Ratione impedit
+                    nisi saepe ut nam magnam molestiae quos modi explicabo aspernatur similique quam esse voluptatem, sed
+                    ea sit eius rem illum. Eaque, earum inventore sequi ea explicabo repellendus ad odit a officia quam dolores
+                    corporis iure architecto voluptas consequatur fuga facere nam dignissimos? Ea, unde dolor ad tenetur
+                    asperiores nihil impedit neque odit velit harum quisquam autem amet corrupti consequuntur aliquid, et
+                    recusandae.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- Import plugin -->
+    <script src="/plugins/jquery.scrollSpy.js"></script>
+    <script src="/plugins/jquery.smoothScrolling.js"></script>
+
+    <!-- How to use it-->
+    <script>
+        $(document).ready(function () {
+            $('.sidebar').scrollSpy();
+            $().smoothScrolling();
+        })
+    </script>
+</body>
+
+</html>

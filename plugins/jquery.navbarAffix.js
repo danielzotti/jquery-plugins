@@ -1,4 +1,5 @@
-﻿(function ($) {
+﻿//Works with Bootstrap 3
+(function ($) {
 
     $.fn.navbarAffix = function (options) {
         // This is the easiest way to have default options.

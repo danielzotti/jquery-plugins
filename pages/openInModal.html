@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>openInModal | JQuery Plugins</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <h3>Open In Modal</h3>
+            <h6>File: jquery.openInModal.ts</h6>
+            <p></p>
+            <div class="target-image">
+                <img src="/images/medioman.jpg?width=300&height=200" width="200" />
+            </div>
+            <div class="target-html">
+                <p>With a general
+                    <strong>html content</strong> (e.g. This text!)</p>
+                <p>With an image inside ->
+                    <img src="/images/medioman.jpg" width="100" />
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- Import plugin -->
+    <script src="/plugins/jquery.openInModal.js"></script>
+
+    <!-- How to use it-->
+    <script>
+        $(document).ready(function () {
+            $('.target-image img').openInModal();
+            $('.target-html').openInModal({
+                fullScreenImage: false
+            });
+        })
+    </script>
+</body>
+
+</html>
