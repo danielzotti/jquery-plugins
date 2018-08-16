@@ -1,8 +1,12 @@
+.home-link {
+    font-size: 30px;
+}
+
 .section {
     text-align: center;
     margin: 20px auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 img {

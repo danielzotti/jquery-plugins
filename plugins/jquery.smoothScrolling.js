@@ -3,7 +3,11 @@
     $.fn.smoothScrolling = function (options) {
         // This is the easiest way to have default options.
         var settings = $.extend({
-            selector: 'a[href*="#"]'
+            selector: 'a[href*="#"]',
+            //per aggiustare il punto in cui viene triggerato l'active (es: se la navbar è alta 50px imposto a 50)
+            adjustment: function () {
+                return 0
+            }
         }, options);
 
         $(settings.selector).on("click", function (event) {
@@ -21,7 +25,7 @@
                     // Only prevent default if animation is actually gonna happen
                     event.preventDefault();
                     $('html, body').animate({
-                        scrollTop: (target.offset().top)
+                        scrollTop: (target.offset().top - settings.adjustment())
                     }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
