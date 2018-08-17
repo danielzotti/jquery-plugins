@@ -32,10 +32,14 @@
 
             $el.on("click", function () {
                 url = $el.attr('src');
+
+                var loc = window.location.pathname;
+                var dir = loc.substring(0, loc.lastIndexOf('/'));
+
                 if (settings.resetUrlParams) {
-                    window.open(window.location.origin + '/' + url.split('?')[0], 'Image ' + url);
+                    window.open(window.location.origin + dir + '/' + url.split('?')[0], 'Image ' + url);
                 } else {
-                    window.open(window.location.origin + '/' + url, 'Image ' + url);
+                    window.open(window.location.origin + dir + '/' + url, 'Image ' + url);
                 }
             });
 
