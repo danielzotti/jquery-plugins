@@ -36,12 +36,6 @@
                 var loc = window.location.pathname;
                 var dir = loc.substring(0, loc.lastIndexOf('/'));
 
-                var test = window.location.origin + dir + '/' + url;
-
-                console.log("loc", loc)
-                console.log("dir", dir)
-                console.log("test", test)
-
                 if (settings.resetUrlParams) {
                     window.open(window.location.origin + dir + '/' + url.split('?')[0], 'Image ' + url);
                 } else {
