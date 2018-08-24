@@ -1,10 +1,6 @@
 // It works only with Slick Slider
 (function ($) {
 
-    var $slick;
-    var $track;
-    var $slides;
-
     $.fn.slickFixHeight = function (options) {
 
         var settings = $.extend({
@@ -13,23 +9,32 @@
 
         // init variables
 
-        $slick = this;
-        $track = $slick.find(settings.trackClass);
-        $slides = $track.children();
+        var $slick = this;
+        var $track = $slick.find(settings.trackClass);
+        var $slides = $track.children();
 
         //on load
-        equalizeHeights();
+        equalizeHeights($track, $slides);
 
         //on resize
-        $(window).on("resize", throttle(equalizeHeights, 200))
+        $(window).on("resize", throttle(function () {
+            equalizeHeights($track, $slides)
+        }, 200))
+        //$(window).on("resize", function () {
+        //    equalizeHeights();
+        //})
+
 
         return this;
     }
 
-    equalizeHeights = function () {
+    equalizeHeights = function ($track, $slides) {
         $slides.css('min-height', '');
-        var minSlideHeight = $track.height();
-        $slides.css('min-height', minSlideHeight);
+        setTimeout(function () {
+            $slides.css('min-height', function () {
+                return $track.height();
+            });
+        }, 0)
     }
 
     throttle = function (fn, frequency) {
