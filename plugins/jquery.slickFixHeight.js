@@ -28,12 +28,8 @@
 
     equalizeHeights = function () {
         $slides.css('min-height', '');
-        $slides.css('height', '');
         var minSlideHeight = $track.height();
-        setTimeout(function () {
-            $slides.css('min-height', minSlideHeight);
-            $slides.css('height', minSlideHeight);
-        }, 0)
+        $slides.css('min-height', minSlideHeight);
     }
 
     throttle = function (fn, frequency) {
