@@ -4,7 +4,7 @@
     var isVisible = false;
     var checkTimeIntervalId;
     var typing = "";
-    var textToFind;
+    var keyword;
     var $container;
     var $iconHtml;
     var messageOnShow;
@@ -17,9 +17,10 @@
             onTyping: false,
             onTime: false,
             onLoad: false,
+            onHash: false,
             containerClass: 'coffee-time',
             content: coffeeSvg,
-            textToFind: 'coffee',
+            keyword: 'coffee',
             customMessageOnShow: 'It\'s coffee time!',
             customMessageOnHide: 'Coffee time it\'s finished',
             coffeeHours: ['11:00-11:15', '16:00-16:15']
@@ -27,7 +28,7 @@
 
         // Init global variables
         coffeeHours = settings.coffeeHours;
-        textToFind = settings.textToFind.toLowerCase();
+        keyword = settings.keyword.toLowerCase();
         messageOnShow = settings.customMessageOnShow;
         messageOnHide = settings.customMessageOnHide;
 
@@ -53,6 +54,11 @@
             showIcon();
         }
 
+        // Show Icon if url has #{keyword} (e.g. #coffee)
+        if (settings.onHash) {
+            checkHash();
+        }
+
         // Check Time
         if (settings.onTime) {
             checkTimeIntervalId = setInterval(function () {
@@ -69,6 +75,13 @@
 
         return this;
     }
+
+    checkHash = function () {
+        if (window.location.hash.toLowerCase() == "#" + keyword) {
+            showIcon(false);
+        }
+    }
+
     checkTime = function () {
         var date = new Date();
 
@@ -110,7 +123,7 @@
             }
             typing += String.fromCharCode(event.which).toLowerCase();
 
-            if (typing.match(textToFind)) {
+            if (typing.match(keyword)) {
                 showIcon(false);
             }
         }
